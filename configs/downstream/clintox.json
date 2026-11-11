@@ -1,0 +1,62 @@
+{
+  "dataset": "clintox",
+  "model_and_training": {
+    "dataset": "clintox",
+    "optimizer_groups": {
+      "backbone": {
+        "lr": 5e-06,
+        "weight_decay": 0.001
+      },
+      "attention": {
+        "lr": 0.0001,
+        "weight_decay": 0.001
+      },
+      "projection": {
+        "lr": 0.0001,
+        "weight_decay": 0.001
+      },
+      "fusion_conv": {
+        "lr": 8e-05,
+        "weight_decay": 0.001
+      },
+      "scale_attn": {
+        "lr": 0.0001,
+        "weight_decay": 0.001
+      },
+      "multi_scale_fusion": {
+        "lr": 0.0001,
+        "weight_decay": 0.001
+      },
+      "residual_proj": {
+        "lr": 0.0001,
+        "weight_decay": 0.001
+      },
+      "task_head": {
+        "lr": 0.00012,
+        "weight_decay": 0.001
+      }
+    },
+    "freeze_attention_epoch": 4,
+    "freeze_hold_epoch": 10,
+    "freeze_full_epoch": 20,
+    "head_dropout": 0.4,
+    "loss_default_alpha": 0.5,
+    "residual_dropout": 0.15,
+    "fusion_3d_dropout": 0.3,
+    "fusion_dim": 128,
+    "fusion_dropout": 0.35,
+    "contrast_weight": 0.02,
+    "min_lr": 8e-07,
+    "lr_decay_epochs": 70,
+    "freeze_description_2": " 解冻：交叉注意力 + 化学注意力",
+    "freeze_description_3": " 保持现有解冻"
+  },
+  "entry": {
+    "dataset_name": "clintox",
+    "cache_dir": "data/cache/BVCNN",
+    "batch_size": 32,
+    "epochs": 50,
+    "lr": 0.0001,
+    "task_type": "classification"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "python_version": "3.12.11",
+  "python_executable": "C:\\Anaconda\\envs\\voxbind\\python.exe",
+  "packages": {
+    "pyuul": {
+      "installed": true,
+      "version": "0.4.2",
+      "module_path": "C:\\Anaconda\\envs\\voxbind\\Lib\\site-packages\\pyuul\\__init__.py",
+      "import": "PASS"
+    },
+    "timeout-decorator": {
+      "installed": false,
+      "module_path": null
+    }
+  }
+}

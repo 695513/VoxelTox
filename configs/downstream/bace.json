@@ -1,0 +1,62 @@
+{
+  "dataset": "bace",
+  "model_and_training": {
+    "dataset": "bace",
+    "optimizer_groups": {
+      "backbone": {
+        "lr": 1e-05,
+        "weight_decay": 0.001
+      },
+      "attention": {
+        "lr": 8e-05,
+        "weight_decay": 0.0001
+      },
+      "projection": {
+        "lr": 0.0001,
+        "weight_decay": 0.0001
+      },
+      "fusion_conv": {
+        "lr": 8e-05,
+        "weight_decay": 0.0001
+      },
+      "scale_attn": {
+        "lr": 0.0001,
+        "weight_decay": 0.0001
+      },
+      "multi_scale_fusion": {
+        "lr": 0.0001,
+        "weight_decay": 0.0001
+      },
+      "residual_proj": {
+        "lr": 0.0001,
+        "weight_decay": 0.0001
+      },
+      "task_head": {
+        "lr": 0.00012,
+        "weight_decay": 0.0001
+      }
+    },
+    "freeze_attention_epoch": 2,
+    "freeze_hold_epoch": 7,
+    "freeze_full_epoch": 15,
+    "head_dropout": 0.6,
+    "loss_default_alpha": 0.65,
+    "residual_dropout": 0.1,
+    "fusion_3d_dropout": 0.3,
+    "fusion_dim": 128,
+    "fusion_dropout": 0.6,
+    "contrast_weight": 0.05,
+    "min_lr": 1e-06,
+    "lr_decay_epochs": 60,
+    "freeze_description_2": "交叉注意力 + 化学注意力",
+    "freeze_description_3": "保持现有解冻"
+  },
+  "entry": {
+    "dataset_name": "bace",
+    "cache_dir": "data/cache/BVCNN",
+    "batch_size": 32,
+    "epochs": 50,
+    "lr": 0.0001,
+    "task_type": "classification"
+  }
+}

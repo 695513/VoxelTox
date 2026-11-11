@@ -1,0 +1,45 @@
+{
+  "torch": {
+    "import": "PASS",
+    "version": "2.5.1+cu124",
+    "cuda_build": "12.4",
+    "cuda_available": false,
+    "gpu_count": 0
+  },
+  "numpy": {
+    "import": "PASS",
+    "version": "2.4.3"
+  },
+  "pandas": {
+    "import": "PASS",
+    "version": "3.0.5"
+  },
+  "scipy": {
+    "import": "PASS",
+    "version": "1.17.1"
+  },
+  "sklearn": {
+    "import": "PASS",
+    "version": "1.8.0"
+  },
+  "transformers": {
+    "import": "PASS",
+    "version": "4.40.0"
+  },
+  "rdkit": {
+    "import": "PASS",
+    "version": "2026.03.5"
+  },
+  "tqdm": {
+    "import": "PASS",
+    "version": "4.67.3"
+  },
+  "pyuul": {
+    "import": "FAIL",
+    "error": "No module named 'pyuul'"
+  },
+  "timeout_decorator": {
+    "import": "FAIL",
+    "error": "No module named 'timeout_decorator'"
+  }
+}

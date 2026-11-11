@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+.venv/
+.env
+
+# Large datasets and generated caches
+/data/cache/
+/data/pretrain/
+
+# Existing model weights in weights/ are included in Git.
+
+# Local run outputs; retain documentation and published metric summaries
+/results/*
+!/results/README.md
+!/results/summary.csv
+
+# Local archival copies and move-audit files
+/legacy/original_sources/
+/legacy/split_save/
+/legacy/split_voxel_cache/
+/environment/files-before-reorganization.json
+/environment/reorganization-verification.json
+
+*.bak
+*.log
+*.xltd
+*.xltd.cfg
+*.qkdownloading

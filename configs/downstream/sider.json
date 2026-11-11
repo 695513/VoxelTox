@@ -1,0 +1,74 @@
+{
+  "dataset": "sider",
+  "model_and_training": {
+    "dataset": "sider",
+    "optimizer_groups": {
+      "backbone_bottom": {
+        "lr": 9e-05,
+        "weight_decay": 0.0002
+      },
+      "electronic_top": {
+        "lr": 9e-05,
+        "weight_decay": 0.00015
+      },
+      "spatial_scaffold_top": {
+        "lr": 9e-05,
+        "weight_decay": 0.0001
+      },
+      "cross_attn": {
+        "lr": 9e-05,
+        "weight_decay": 0.0001
+      },
+      "chem_attention": {
+        "lr": 9e-05,
+        "weight_decay": 0.0001
+      },
+      "fusion_conv": {
+        "lr": 9e-05,
+        "weight_decay": 0.0001
+      },
+      "scale_attn": {
+        "lr": 0.00011,
+        "weight_decay": 5e-05
+      },
+      "multi_scale_fusion": {
+        "lr": 0.0001,
+        "weight_decay": 5e-05
+      },
+      "task_head": {
+        "lr": 0.00011,
+        "weight_decay": 5e-05
+      },
+      "residual_proj": {
+        "lr": 0.00011,
+        "weight_decay": 0
+      },
+      "light_adapt": {
+        "lr": 0.00011,
+        "weight_decay": 5e-05
+      }
+    },
+    "freeze_attention_epoch": 3,
+    "freeze_hold_epoch": 6,
+    "freeze_full_epoch": 8,
+    "head_dropout": 0.4,
+    "loss_default_alpha": 0.5,
+    "residual_dropout": 0.1,
+    "fusion_3d_dropout": 0.3,
+    "fusion_dim": 512,
+    "fusion_dropout": 0.3,
+    "contrast_weight": 0.05,
+    "min_lr": 1e-06,
+    "lr_decay_epochs": 60,
+    "freeze_description_2": "交叉注意力 + 化学注意力",
+    "freeze_description_3": "保持现有解冻"
+  },
+  "entry": {
+    "dataset_name": "sider",
+    "cache_dir": "data/cache/BVCNN",
+    "batch_size": 32,
+    "epochs": 50,
+    "lr": 0.0001,
+    "task_type": "classification"
+  }
+}
