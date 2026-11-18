@@ -44,7 +44,7 @@ python -m pip install -r requirements.txt
 - 下游初始化权重：`weights/pretrain_model_epoch_23.pth`。
 - 已有下游权重：`weights/downstream/`，文件对应关系见 [weights/README.md](weights/README.md)。
 
-更多数据说明见 [data/README.md](data/README.md)。已有权重随代码仓库提供；大体积预训练数据和体素缓存通过 `.gitignore` 排除普通 Git 提交，正式发布时需补上独立下载链接。
+更多数据说明见 [data/README.md](data/README.md)。已有权重随代码仓库提供；大体积预训练数据和体素缓存可从 [Hugging Face 数据集仓库](https://huggingface.co/datasets/jiataolu695513/VoxelTox-data) 下载。
 
 ## 运行
 
@@ -102,4 +102,4 @@ python pretrain/pretrain.py --cache-root data/cache/pretrain --save-dir results/
 - 当前没有单独的 `evaluate.py`。`train.py` 包含训练期评估，但不提供只加载现有下游权重进行评估的入口。
 - 目录整理没有修改模型结构、损失公式、掩码用法和现有实验超参数。原始代码位于 `legacy/original_sources/`。
 - 现有权重与模型结构的匹配已检查；目录整理不代表已经复跑完整预训练、下游训练或复核论文 AUC。
-- 论文信息、引用信息、代码许可证及数据/权重下载地址，需在正式发布时补充。
+- 论文信息、引用信息和代码许可证仍可根据正式发表版本补充；数据和权重下载地址已在上文列出。
